@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Official Suncity Solar Brand Theme */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+    
+    /* Navy Blue as Primary */
+    --primary: 216 75% 15%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Light backgrounds */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 215 28% 17%;
+    
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Green accent */
+    --accent: 120 43% 46%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 32 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    --chart-1: 32 100% 50%;
+    --chart-2: 120 43% 46%;
+    --chart-3: 216 75% 15%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 216 75% 15%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 215 28% 17%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 32 100% 50%;
+  }
+
+  .dark {
+    --background: 215 28% 17%;
+    --foreground: 0 0% 98%;
+    
+    --card: 215 28% 17%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 215 28% 17%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 32 100% 50%;
+    --primary-foreground: 215 28% 17%;
+    
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 120 43% 46%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 32 100% 50%;
+    
+    --sidebar-background: 215 28% 17%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 32 100% 50%;
+    --sidebar-primary-foreground: 215 28% 17%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 32 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  section {
+    @apply py-20 md:py-28;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium Button Styles */
+  .btn-solar {
+    @apply inline-flex items-center justify-center gap-2 
+           bg-gradient-solar text-white font-semibold
+           px-8 py-4 rounded-full
+           shadow-orange hover:shadow-orange-lg
+           transition-all duration-300 ease-out
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  .btn-solar:hover {
+    background: linear-gradient(135deg, #FF8C00 0%, #E67E00 100%);
+  }
+  
+  .btn-navy {
+    @apply inline-flex items-center justify-center gap-2 
+           bg-navy-600 text-white font-semibold
+           px-8 py-4 rounded-full
+           shadow-navy hover:shadow-lg
+           transition-all duration-300 ease-out
+           hover:bg-navy-500 hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-white font-semibold
+           px-8 py-4 rounded-full
+           border-2 border-white/80
+           transition-all duration-300 ease-out
+           hover:bg-white hover:text-navy-600
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  .btn-outline-navy {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-navy-600 font-semibold
+           px-8 py-4 rounded-full
+           border-2 border-navy-600
+           transition-all duration-300 ease-out
+           hover:bg-navy-600 hover:text-white
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  /* Card Styles */
+  .card-premium {
+    @apply bg-white rounded-2xl shadow-card
+           transition-all duration-300 ease-out
+           hover:shadow-card-hover hover:-translate-y-1;
+  }
+  
+  /* Section Title Styles */
+  .section-subtitle {
+    @apply text-solar-500 font-semibold text-sm uppercase tracking-wider mb-2
+           flex items-center gap-2;
+  }
+  
+  .section-subtitle::before {
+    content: '';
+    @apply w-8 h-0.5 bg-gradient-solar rounded-full;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-navy-600 mb-6;
+  }
+  
+  /* Green Accent Line */
+  .accent-line {
+    @apply w-16 h-1 bg-suncity-green rounded-full;
+  }
+  
+  .accent-line-orange {
+    @apply w-16 h-1 bg-gradient-solar rounded-full;
+  }
+  
+  /* Stats Counter */
+  .stat-number {
+    @apply text-4xl md:text-5xl font-bold;
+    background: linear-gradient(135deg, #0A1F44 0%, #1A3560 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Icon Box */
+  .icon-box {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center
+           bg-gradient-solar text-white shadow-orange
+           transition-all duration-300;
+  }
+  
+  .icon-box-green {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center
+           bg-suncity-green text-white shadow-green
+           transition-all duration-300;
+  }
+  
+  .icon-box-navy {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center
+           bg-navy-600 text-white shadow-navy
+           transition-all duration-300;
+  }
+  
+  .icon-box-outline {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center
+           border-2 border-solar-400 text-solar-500
+           transition-all duration-300
+           group-hover:bg-gradient-solar group-hover:text-white group-hover:border-transparent;
+  }
+  
+  /* Badge Styles */
+  .badge-solar {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 
+           bg-solar-100 text-solar-600 rounded-full 
+           text-xs font-semibold;
+  }
+  
+  .badge-navy {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 
+           bg-navy-100 text-navy-600 rounded-full 
+           text-xs font-semibold;
+  }
+  
+  .badge-green {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 
+           bg-green-100 text-suncity-green rounded-full 
+           text-xs font-semibold;
+  }
+  
+  /* Nav Link Active */
+  .nav-link-active {
+    @apply relative text-solar-400;
+  }
+  
+  .nav-link-active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-solar rounded-full;
+  }
+}
+
+@layer utilities {
+  /* Animation Delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+  
+  /* Text Gradient */
+  .text-gradient-solar {
+    background: linear-gradient(135deg, #FFB200 0%, #FF8C00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-navy {
+    background: linear-gradient(135deg, #0A1F44 0%, #1A3560 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-green {
+    background: linear-gradient(135deg, #47A447 0%, #5CB85C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Glass Effect */
+  .glass-effect {
+    @apply backdrop-blur-lg bg-white/90;
+  }
+  
+  .glass-navy {
+    @apply backdrop-blur-lg bg-navy-600/95;
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A beautiful view of solar panels on a modern house roof under a clear blue sky.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2xhciUyMHBhbmVscyUyMHJvb2Z8ZW58MHx8fHwxNzY0NzM5NDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar panels roof"
+    },
+    {
+      "id": "about-suncity",
+      "description": "A team of Suncity Solar engineers smiling and standing in front of a solar panel installation.",
+      "imageUrl": "https://images.unsplash.com/photo-1652326320478-38c1e9842e85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzb2xhciUyMHRlYW18ZW58MHx8fHwxNzY0NzM5NDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar team"
+    },
+    {
+      "id": "product-panel",
+      "description": "Close-up shot of a Suncity Solar Mono-PERC solar panel.",
+      "imageUrl": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2xhciUyMHBhbmVsfGVufDB8fHx8MTc2NDczOTQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar panel"
+    },
+    {
+      "id": "product-inverter",
+      "description": "A Suncity Solar inverter mounted on a wall.",
+      "imageUrl": "https://images.unsplash.com/photo-1626793369994-a904d2462888?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb2xhciUyMGludmVydGVyfGVufDB8fHx8MTc2NDY2NDUxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar inverter"
+    },
+    {
+      "id": "product-street-light",
+      "description": "A Suncity Solar street light in a suburban setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1579114213255-d8d82bfff681?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHJlZXQlMjBsaWdodHxlbnwwfHx8fDE3NjQ3Mzk0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "street light"
+    },
+    {
+      "id": "product-water-heater",
+      "description": "A solar water heater installed on a roof.",
+      "imageUrl": "https://images.unsplash.com/photo-1684055733705-23d5f0661696?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb2xhciUyMGhlYXRlcnxlbnwwfHx8fDE3NjQ3Mzk0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar heater"
+    },
+    {
+      "id": "product-pump",
+      "description": "A solar water pump in an agricultural field.",
+      "imageUrl": "https://images.unsplash.com/photo-1570513927207-1bbbd1aa5b10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzb2xhciUyMHB1bXB8ZW58MHx8fHwxNzY0NzM5NDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar pump"
+    },
+    {
+      "id": "product-system",
+      "description": "A complete home solar system installation.",
+      "imageUrl": "https://images.unsplash.com/photo-1529788295308-1eace6f67388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c29sYXIlMjBzeXN0ZW18ZW58MHx8fHwxNzY0NzM5NDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar system"
+    },
+    {
+      "id": "project-home-1",
+      "description": "Rooftop solar installation on a modern home.",
+      "imageUrl": "https://images.unsplash.com/photo-1552197892-f2ad2f75e7c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb29mdG9wJTIwc29sYXJ8ZW58MHx8fHwxNzY0NjY0NTEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rooftop solar"
+    },
+    {
+      "id": "project-home-2",
+      "description": "Rooftop solar installation on a traditional Indian house.",
+      "imageUrl": "https://images.unsplash.com/photo-1635424709845-3a85ad5e1f5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mdG9wJTIwc29sYXIlMjBob3VzZXxlbnwwfHx8fDE3NjQ3Mzk0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rooftop solar house"
+    },
+    {
+      "id": "project-industrial-1",
+      "description": "Large-scale solar panel installation on a factory roof.",
+      "imageUrl": "https://images.unsplash.com/photo-1599814892237-6334d6faea30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmR1c3RyaWFsJTIwc29sYXJ8ZW58MHx8fHwxNzY0NzM5NDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industrial solar"
+    },
+    {
+      "id": "project-industrial-2",
+      "description": "Solar panels powering an industrial complex.",
+      "imageUrl": "https://images.unsplash.com/photo-1701089861941-afe288b75dc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYWN0b3J5JTIwc29sYXJ8ZW58MHx8fHwxNzY0NzM5NDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "factory solar"
+    },
+    {
+      "id": "project-agri-1",
+      "description": "Solar water pump in a green field.",
+      "imageUrl": "https://images.unsplash.com/photo-1561115867-be8460fbebfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXJtJTIwc29sYXIlMjBwdW1wfGVufDB8fHx8MTc2NDczOTQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "farm solar pump"
+    },
+    {
+      "id": "project-agri-2",
+      "description": "Multiple solar pumps for large-scale irrigation.",
+      "imageUrl": "https://images.unsplash.com/photo-1676376030994-abeaa1d39510?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmFybSUyMHNvbGFyfGVufDB8fHx8MTc2NDczOTQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "farm solar"
+    },
+    {
+      "id": "project-street-1",
+      "description": "A row of solar street lights along a road.",
+      "imageUrl": "https://images.unsplash.com/photo-1723693061758-9485c33b8832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzb2xhciUyMHN0cmVldCUyMGxpZ2h0fGVufDB8fHx8MTc2NDczOTQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar street light"
+    },
+    {
+      "id": "project-hybrid-1",
+      "description": "A hybrid solar system installation at a hotel.",
+      "imageUrl": "https://images.unsplash.com/photo-1758805768368-0e75b108b9f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aG90ZWwlMjBzb2xhcnxlbnwwfHx8fDE3NjQ3Mzk0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hotel solar"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "A happy customer.",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2NzYxNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Another happy customer.",
+      "imageUrl": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2NzYxNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "A smiling person.",
+      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2NzYxNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "A person giving a thumbs up.",
+      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ2NzYxNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "contact-map",
+      "description": "A map showing the location of the Suncity Solar head office in Jaipur.",
+      "imageUrl": "https://images.unsplash.com/photo-1717343823307-973d0903d222?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2NDczMzAwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    },
+    {
+      "id": "dos-training",
+      "description": "Students in a classroom learning about solar technology.",
+      "imageUrl": "https://images.unsplash.com/photo-1664382953518-4a664ab8a8c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjbGFzc3Jvb20lMjB0cmFpbmluZ3xlbnwwfHx8fDE3NjQ3Mzk0MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classroom training"
+    },
+    {
+      "id": "blog-future",
+      "description": "Solar panels against a sunrise, symbolizing the future.",
+      "imageUrl": "https://images.unsplash.com/photo-1760988006589-fdedcc8e0812?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzb2xhciUyMHN1bnJpc2V8ZW58MHx8fHwxNzY0NzM5NDA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar sunrise"
+    },
+    {
+      "id": "blog-choose",
+      "description": "A person looking thoughtfully at different solar panels.",
+      "imageUrl": "https://images.unsplash.com/photo-1518644730709-0835105d9daa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjB0aGlua2luZ3xlbnwwfHx8fDE3NjQ2MzA0MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person thinking"
+    },
+    {
+      "id": "blog-battery",
+      "description": "A comparison image of a lithium battery and a lead-acid battery.",
+      "imageUrl": "https://images.unsplash.com/photo-1605191738062-c861b8afebc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2xhciUyMGJhdHRlcnl8ZW58MHx8fHwxNzY0NzM5NDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar battery"
+    },
+    {
+      "id": "blog-metering",
+      "description": "An electric meter spinning backwards.",
+      "imageUrl": "https://images.unsplash.com/photo-1757146578941-37e7acc595a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlbGVjdHJpYyUyMG1ldGVyfGVufDB8fHx8MTc2NDYyOTUwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electric meter"
+    },
+    {
+      "id": "blog-farmer",
+      "description": "A happy farmer standing next to a solar water pump.",
+      "imageUrl": "https://images.unsplash.com/photo-1749457452151-75a61e6ea376?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYXJtZXIlMjBzb2xhcnxlbnwwfHx8fDE3NjQ3Mzk0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "farmer solar"
+    }
+  ]
+}

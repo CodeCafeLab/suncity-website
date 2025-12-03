@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Orange sun gradient -->
+    <linearGradient id="sunGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB200"/>
+      <stop offset="100%" style="stop-color:#FF8C00"/>
+    </linearGradient>
+    <!-- Green gradient for leaves -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5CB85C"/>
+      <stop offset="100%" style="stop-color:#47A447"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Green outer leaf/petal shapes -->
+  <!-- Top petal -->
+  <path d="M100 15 L130 50 L100 50 L70 50 Z" fill="url(#greenGradient)"/>
+  <!-- Bottom petal -->
+  <path d="M100 185 L130 150 L100 150 L70 150 Z" fill="url(#greenGradient)"/>
+  <!-- Left petal -->
+  <path d="M15 100 L50 70 L50 100 L50 130 Z" fill="url(#greenGradient)"/>
+  <!-- Right petal -->
+  <path d="M185 100 L150 70 L150 100 L150 130 Z" fill="url(#greenGradient)"/>
+  
+  <!-- Navy blue corner squares with rounded corners -->
+  <!-- Top-left square -->
+  <rect x="35" y="35" width="55" height="55" rx="8" fill="#0A1F44"/>
+  <!-- Top-right square -->
+  <rect x="110" y="35" width="55" height="55" rx="8" fill="#0A1F44"/>
+  <!-- Bottom-left square -->
+  <rect x="35" y="110" width="55" height="55" rx="8" fill="#0A1F44"/>
+  <!-- Bottom-right square -->
+  <rect x="110" y="110" width="55" height="55" rx="8" fill="#0A1F44"/>
+  
+  <!-- Orange sun circle in center -->
+  <circle cx="100" cy="100" r="38" fill="url(#sunGradient)"/>
+</svg>
