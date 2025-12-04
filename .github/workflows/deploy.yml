@@ -1,4 +1,4 @@
-name: Deploy to Production
+name: Deploy Suncity Website
 
 on:
   push:
@@ -9,26 +9,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build application
-        run: npm run build
-        env:
-          NODE_ENV: production
-
-      - name: Deploy to server
+      - name: Deploy to Server
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: 72.60.218.240
@@ -37,15 +20,34 @@ jobs:
           port: 22
           script: |
             set -e
-            cd /var/www/suncity-website
-            echo "Pulling latest changes..."
-            git pull origin main
-            echo "Installing dependencies..."
-            npm ci --production
-            echo "Building application..."
-            npm run build
-            echo "Restarting PM2 process..."
-            pm2 restart suncity-website || pm2 start ecosystem.config.js
-            pm2 save
-            echo "Deployment completed successfully!"
+            echo "🚀 Deploying Suncity Website..."
 
+            APP_DIR="/var/www/suncity-website"
+            REPO_URL="https://github.com/CodeCafeLab/suncity-website.git"
+
+            if [ ! -d "$APP_DIR" ]; then
+              echo "📁 Directory missing — cloning repo..."
+              git clone "$REPO_URL" "$APP_DIR"
+            fi
+
+            cd "$APP_DIR"
+            echo "📥 Pulling latest changes..."
+            git fetch origin main --tags
+            git reset --hard origin/main
+            git clean -fd
+
+            echo "📦 Installing dependencies..."
+            npm install --legacy-peer-deps
+
+            echo "🏗️ Building website..."
+            NODE_ENV=production npm run build
+
+            echo "🔁 Restarting PM2 App..."
+            if pm2 describe suncity-website >/dev/null 2>&1; then
+              pm2 reload suncity-website --update-env
+            else
+              pm2 start ecosystem.config.js --name suncity-website
+            fi
+
+            pm2 save
+            echo "🎯 Suncity Website Deployed Successfully!"
