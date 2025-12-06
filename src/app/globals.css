@@ -109,7 +109,7 @@
   }
   
   section {
-    @apply py-20 md:py-28;
+    @apply py-8 md:py-12;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -129,7 +129,7 @@
   }
   
   .btn-solar:hover {
-    background: linear-gradient(135deg, #FF8C00 0%, #E67E00 100%);
+    background: linear-gradient(135deg, #E5B03A 0%, #D19C28 100%);
   }
   
   .btn-navy {
@@ -195,7 +195,7 @@
   /* Stats Counter */
   .stat-number {
     @apply text-4xl md:text-5xl font-bold;
-    background: linear-gradient(135deg, #0A1F44 0%, #1A3560 100%);
+    background: linear-gradient(135deg, #05203D 0%, #041A32 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -270,21 +270,28 @@
   
   /* Text Gradient */
   .text-gradient-solar {
-    background: linear-gradient(135deg, #FFB200 0%, #FF8C00 100%);
+    background: linear-gradient(135deg, #F4C44D 0%, #E5B03A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .text-gradient-navy {
-    background: linear-gradient(135deg, #0A1F44 0%, #1A3560 100%);
+    background: linear-gradient(135deg, #05203D 0%, #041A32 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .text-gradient-green {
-    background: linear-gradient(135deg, #47A447 0%, #5CB85C 100%);
+  .text-gradient-teal {
+    background: linear-gradient(135deg, #2DD4BF 0%, #1ABFA9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #F4C44D 0%, #E5B03A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

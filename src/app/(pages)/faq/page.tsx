@@ -67,9 +67,9 @@ export default function FaqPage() {
         description="Got questions? We've got answers. Everything you need to know about going solar with Suncity."
       />
 
-      <section className="py-24 bg-white">
+      <section className="py-8 md:py-12 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-10">
             <div className="section-subtitle justify-center">Common Questions</div>
             <h2 className="section-title">
               Find Your <span className="text-gradient-solar">Answers</span>
@@ -99,7 +99,7 @@ export default function FaqPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-br from-navy-600 to-navy-500 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-solar-500/20 rounded-full blur-3xl" />

@@ -548,32 +548,51 @@ export const AnimatedCounter = ({
 }: CounterProps) => {
   const [count, setCount] = React.useState(from);
   const [hasAnimated, setHasAnimated] = React.useState(false);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            const startTime = Date.now();
+            const animate = () => {
+              const elapsed = Date.now() - startTime;
+              const progress = Math.min(elapsed / (duration * 1000), 1);
+              const easeOut = 1 - Math.pow(1 - progress, 3);
+              setCount(Math.floor(from + (to - from) * easeOut));
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              }
+            };
+            requestAnimationFrame(animate);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated, from, to, duration]);
 
   return (
-    <motion.span
-      className={className}
+    <motion.div
+      ref={containerRef}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      onViewportEnter={() => {
-        if (!hasAnimated) {
-          setHasAnimated(true);
-          const startTime = Date.now();
-          const animate = () => {
-            const elapsed = Date.now() - startTime;
-            const progress = Math.min(elapsed / (duration * 1000), 1);
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(from + (to - from) * easeOut));
-            if (progress < 1) {
-              requestAnimationFrame(animate);
-            }
-          };
-          requestAnimationFrame(animate);
-        }
-      }}
+      className="inline"
     >
-      {count.toLocaleString()}{suffix}
-    </motion.span>
+      <span className={className}>
+        {count.toLocaleString()}{suffix}
+      </span>
+    </motion.div>
   );
 };
 

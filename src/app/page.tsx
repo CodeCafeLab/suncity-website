@@ -8,7 +8,6 @@ import {
   Sun,
   Award,
   ArrowRight,
-  Sparkles,
   BatteryCharging,
   Settings,
   Quote,
@@ -44,25 +43,21 @@ const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-suncity');
 
 const services = [
   {
-    slug: 'solar-system-design-installation',
     icon: Sun,
     title: 'Solar System Design & Installation',
     description: 'Complete turnkey solar solutions from design to commissioning for homes, businesses, and industries.',
   },
   {
-    slug: 'smart-energy-storage-solutions',
     icon: BatteryCharging,
     title: 'Smart Energy Storage Solutions',
     description: 'Advanced lithium battery systems with intelligent energy management for 24/7 power backup.',
   },
   {
-    slug: 'energy-efficiency-consulting',
     icon: BarChart3,
     title: 'Energy Efficiency Consulting',
     description: 'Expert analysis and recommendations to optimize your energy consumption and maximize savings.',
   },
   {
-    slug: 'monitoring-maintenance-services',
     icon: Settings,
     title: 'Monitoring & Maintenance Services',
     description: 'Proactive system monitoring, regular maintenance, and prompt support to ensure peak performance.',
@@ -89,7 +84,6 @@ const whyChooseUs = [
 
 const projects = [
   {
-    slug: 'brightmall-complex',
     capacity: '500 kWp',
     category: 'Commercial',
     type: 'Grid-Tied Solar PV',
@@ -99,7 +93,6 @@ const projects = [
     image: PlaceHolderImages.find((p) => p.id === 'project-industrial-1'),
   },
   {
-    slug: 'suncare-hospital',
     capacity: '420 kWp',
     category: 'Healthcare',
     type: 'Solar Hybrid (PV + Battery)',
@@ -109,7 +102,6 @@ const projects = [
     image: PlaceHolderImages.find((p) => p.id === 'project-industrial-2'),
   },
   {
-    slug: 'ecobank-tower',
     capacity: '350 kWp',
     category: 'Corporate',
     type: 'Building Integrated PV',
@@ -119,7 +111,6 @@ const projects = [
     image: PlaceHolderImages.find((p) => p.id === 'project-home-1'),
   },
   {
-    slug: 'greenforge-factory',
     capacity: '1.2 MWp',
     category: 'Industrial',
     type: 'Solar PV',
@@ -159,7 +150,6 @@ const testimonials = [
 
 const caseStudies = [
   {
-    slug: 'urban-mall-rooftop',
     capacity: '300kWp solar rooftop system',
     title: 'Solar Rooftop for Urban Mall',
     description: 'Integration with mall\'s BMS for smart energy usage, real-time monitoring, and optimized performance.',
@@ -167,7 +157,6 @@ const caseStudies = [
     location: 'Jaipur',
   },
   {
-    slug: 'rural-school-offgrid',
     capacity: '25kWp solar + battery storage',
     title: 'Off-Grid Solar for Rural School',
     description: 'System runs independently with zero diesel usage, ensuring uninterrupted learning.',
@@ -175,7 +164,6 @@ const caseStudies = [
     location: 'Rajasthan',
   },
   {
-    slug: 'greenforge-factory',
     capacity: '1MWp ground-mounted solar',
     title: 'Industrial Solar for Textile Factory',
     description: 'Installed with zero production downtime, full safety compliance, and seamless grid integration.',
@@ -183,7 +171,6 @@ const caseStudies = [
     location: 'Gujarat',
   },
   {
-    slug: 'ecobank-tower',
     capacity: '25kWp solar + battery',
     title: 'Solar Carport for Corporate HQ',
     description: 'Modular design with dual benefit: power & parking, plus enhanced EV charging accessibility.',
@@ -194,22 +181,19 @@ const caseStudies = [
 
 const blogPosts = [
   {
-    slug: 'how-solar-cuts-business-energy-costs',
-    title: 'How Solar Cuts Business Energy Costs',
-    date: 'July 15, 2024',
+    title: 'How Solar Rooftop Systems Reduce Electricity Bills',
+    date: 'December 5, 2024',
     image: PlaceHolderImages.find((p) => p.id === 'blog-future'),
   },
   {
-    slug: 'why-green-energy-matters-more-today',
-    title: 'Why Green Energy Matters More Today',
-    date: 'July 10, 2024',
+    title: 'Why Solar Is the Smartest Investment for Homes & Industries',
+    date: 'November 28, 2024',
     image: PlaceHolderImages.find((p) => p.id === 'blog-choose'),
   },
   {
-    slug: 'top-ways-to-maximize-solar-efficiency',
-    title: 'Top Ways to Maximize Solar Efficiency',
-    date: 'July 5, 2024',
-    image: PlaceHolderImages.find((p) => p.id === 'blog-battery'),
+    title: 'Why Choosing the Right Solar EPC Partner Matters',
+    date: 'November 20, 2024',
+    image: PlaceHolderImages.find((p) => p.id === 'blog-metering'),
   },
 ];
 
@@ -248,124 +232,92 @@ export default function Home() {
           )}
 
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-navy-600/80" />
-
-          {/* Animated Gradient Orbs */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.5 }}
-            className="absolute top-20 right-10 w-96 h-96 bg-solar-500/30 rounded-full blur-[100px] animate-pulse" 
-          />
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.7 }}
-            className="absolute bottom-20 left-10 w-80 h-80 bg-suncity-green/20 rounded-full blur-[80px] animate-pulse" 
-            style={{ animationDelay: '1s' }} 
-          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-600/90 via-navy-600/80 to-navy-600/90" />
 
           {/* Content */}
-          <div className="relative container mx-auto px-4 pt-32 pb-20">
-            <div className="max-w-4xl">
-              {/* Subtitle */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8"
-              >
-                <Sparkles className="w-4 h-4 text-solar-400" />
-                <span className="text-white/90 text-sm font-medium tracking-wide">
-                  Let&apos;s Talk Energy
-                </span>
-              </motion.div>
-
-              {/* Main Headline */}
+          <div className="relative container mx-auto px-4 pt-28 pb-16">
+            <div className="max-w-5xl mx-auto text-center">
+              {/* Main Headline - Bold Serif */}
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.4 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8"
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white leading-tight mb-4"
               >
-                Next-Gen Energy for a{' '}
-                <span className="text-gradient-solar">Sustainable Future</span>
+                Powering Bharat&apos;s Future with{' '}
+                <span className="text-gradient-gold">Clean Solar Energy</span>
               </motion.h1>
 
               {/* Description */}
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl leading-relaxed"
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className="text-base md:text-lg lg:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed font-light"
               >
-                Clean energy isn&apos;t the future, it&apos;s now. <strong className="text-white">Suncity Solar</strong> delivers smart solar solutions that power progress, cut emissions, and protect the planet for generations to come.
+                Cut electricity costs by up to 70% with India&apos;s most trusted solar EPC solutions. ISO-certified, BIS-approved, and backed by 6+ years of excellence across 5000+ installations.
               </motion.p>
 
-              {/* CTA Button */}
+              {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.7, delay: 0.6 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-3 bg-gradient-solar text-white font-semibold text-lg px-10 py-5 rounded-full shadow-orange-lg hover:shadow-2xl transition-all duration-300"
+                    className="inline-flex items-center gap-2 bg-gradient-gold text-navy-600 font-semibold text-base px-8 py-4 rounded-lg shadow-gold-lg hover:shadow-gold transition-all duration-300"
                   >
-                    Go Renewable
+                    Get Free Quote
                     <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                  <Link
+                    href="/products"
+                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white font-semibold text-base px-8 py-4 rounded-lg border-2 border-white/30 hover:bg-white/20 transition-all duration-300"
+                  >
+                    Explore Solutions
                   </Link>
                 </motion.div>
               </motion.div>
             </div>
           </div>
 
-          {/* Stats Bar */}
+          {/* Stats Bar - Solis Power Style */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
             className="absolute bottom-0 left-0 right-0"
           >
-            <div className="container mx-auto px-4">
-              <div className="bg-white rounded-t-3xl shadow-2xl p-8 md:p-10">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                  {/* Stats */}
-                  <div className="flex items-center gap-12">
-                    <div className="text-center md:text-left">
-                      <div className="text-4xl md:text-5xl font-bold text-navy-600">
-                        <AnimatedCounter to={10} suffix="K+" />
-                      </div>
-                      <p className="text-gray-500 mt-1">Solar Panels Installed</p>
+            <div className="container mx-auto px-4 md:px-6">
+              <div className="bg-white rounded-t-[2rem] shadow-premium p-6 md:p-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                  {/* Stat 1 */}
+                  <div className="text-center">
+                    <div className="text-5xl md:text-6xl font-serif font-bold text-navy-600 mb-2">
+                      <AnimatedCounter to={10} suffix="K+" />
                     </div>
-                    <div className="hidden md:block w-px h-16 bg-gray-200" />
-                    <div className="flex items-center gap-4">
-                      <div className="flex gap-2">
-                        {['ISO', 'BIS', 'CE'].map((cert) => (
-                          <span key={cert} className="px-3 py-1.5 bg-suncity-green/10 text-suncity-green text-xs font-semibold rounded-full">
-                            {cert}
-                          </span>
-                        ))}
-                      </div>
-                      <span className="text-sm text-gray-500">Certified Company</span>
-                    </div>
+                    <p className="text-gray-600 font-medium">Solar Panels Installed</p>
                   </div>
-
-                  {/* Discover Button */}
-                  <div className="flex items-center gap-4">
-                    <span className="text-navy-600 font-medium">Discover Next-Gen Solar Solutions</span>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                      <Link
-                        href="/products"
-                        className="inline-flex items-center justify-center w-12 h-12 bg-gradient-solar text-white rounded-full shadow-orange"
-                      >
-                        <ArrowRight className="w-5 h-5" />
-                      </Link>
-                    </motion.div>
+                  
+                  {/* Stat 2 */}
+                  <div className="text-center border-y md:border-y-0 md:border-x border-gray-200 py-6 md:py-0">
+                    <div className="text-5xl md:text-6xl font-serif font-bold text-navy-600 mb-2">
+                      <AnimatedCounter to={15} suffix="MW+" />
+                    </div>
+                    <p className="text-gray-600 font-medium">Daily Generation</p>
+                  </div>
+                  
+                  {/* Stat 3 */}
+                  <div className="text-center">
+                    <div className="text-5xl md:text-6xl font-serif font-bold text-navy-600 mb-2">
+                      <AnimatedCounter to={5000} suffix="+" />
+                    </div>
+                    <p className="text-gray-600 font-medium">Happy Customers</p>
                   </div>
                 </div>
               </div>
@@ -373,10 +325,10 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* About Section - Who We Are */}
-        <SectionReveal className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* About Section - Solis Power Style */}
+        <SectionReveal className="py-8 md:py-12 bg-white relative overflow-hidden">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
               {/* Image Side */}
               <SlideInLeft>
                 <div className="relative">
@@ -418,20 +370,19 @@ export default function Home() {
               {/* Content Side */}
               <div>
                 <FadeUp>
-                  <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4">
-                    <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
-                    Who We Are
-                  </div>
+                  <span className="inline-block text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4">
+                    About Suncity Solar
+                  </span>
                 </FadeUp>
                 <FadeUp delay={0.1}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-navy-600 mb-6 leading-tight">
-                    Creating Impact Through{' '}
-                    <span className="text-gradient-solar">Clean Innovation</span>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-navy-600 mb-6 leading-tight">
+                    Empowering Bharat with{' '}
+                    <span className="text-gradient-gold">Sustainable Energy</span>
                   </h2>
                 </FadeUp>
                 <FadeUpSmall delay={0.2}>
                   <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    <strong className="text-navy-600">Suncity Solar</strong> is a renewable energy company committed to driving sustainability through smart solar technology, empowering homes, businesses and communities to transition to a cleaner, more efficient and future-proof energy ecosystem.
+                    <strong className="text-navy-600">Suncity Solar</strong> is a leading renewable energy company committed to driving sustainability through smart solar technology. We empower homes, businesses, and communities to transition to a cleaner, more efficient, and future-proof energy ecosystem.
                   </p>
                 </FadeUpSmall>
 
@@ -448,23 +399,23 @@ export default function Home() {
                 {/* Vision & Mission */}
                 <StaggerContainer className="grid sm:grid-cols-2 gap-6 mt-10" staggerDelay={0.1} delayChildren={0.4}>
                   <StaggerItem>
-                    <AnimatedCard className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
-                      <div className="w-12 h-12 bg-navy-600 rounded-xl flex items-center justify-center mb-4">
-                        <Eye className="w-6 h-6 text-white" />
+                    <AnimatedCard className="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover border border-gray-100 h-full transition-all">
+                      <div className="w-14 h-14 bg-navy-600 rounded-xl flex items-center justify-center mb-5">
+                        <Eye className="w-7 h-7 text-white" />
                       </div>
-                      <h3 className="font-bold text-navy-600 text-lg mb-2">Our Vision</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <h3 className="font-serif font-bold text-navy-600 text-xl mb-3">Our Vision</h3>
+                      <p className="text-gray-600 leading-relaxed">
                         To build a future where every life is empowered by clean, intelligent energy that drives sustainable progress.
                       </p>
                     </AnimatedCard>
                   </StaggerItem>
                   <StaggerItem>
-                    <AnimatedCard className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
-                      <div className="w-12 h-12 bg-gradient-solar rounded-xl flex items-center justify-center mb-4">
-                        <Target className="w-6 h-6 text-white" />
+                    <AnimatedCard className="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover border border-gray-100 h-full transition-all">
+                      <div className="w-14 h-14 bg-gradient-gold rounded-xl flex items-center justify-center mb-5">
+                        <Target className="w-7 h-7 text-navy-600" />
                       </div>
-                      <h3 className="font-bold text-navy-600 text-lg mb-2">Our Mission</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <h3 className="font-serif font-bold text-navy-600 text-xl mb-3">Our Mission</h3>
+                      <p className="text-gray-600 leading-relaxed">
                         To deliver innovative solar solutions that empower people, drive progress, and protect the planet.
                       </p>
                     </AnimatedCard>
@@ -475,115 +426,90 @@ export default function Home() {
           </div>
         </SectionReveal>
 
-        {/* Services Section - Powering Solutions */}
-        <SectionReveal className="py-24 bg-white">
-          <div className="container mx-auto px-4">
+        {/* Services Section - Solis Power Style */}
+        <SectionReveal className="py-8 md:py-12 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
             {/* Header */}
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
-              <div className="max-w-2xl">
-                <FadeUp>
-                  <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4">
-                    <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
-                    Powering Solutions
-                  </div>
-                </FadeUp>
-                <FadeUp delay={0.1}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-navy-600 leading-tight">
-                    Revolutionizing Energy for{' '}
-                    <span className="text-gradient-solar">Tomorrow&apos;s World</span>
-                  </h2>
-                </FadeUp>
-              </div>
-              {/* Stats */}
-              <FadeUp delay={0.2} className="flex gap-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-navy-600">
-                    <AnimatedCounter to={15} suffix="MW+" />
-                  </div>
-                  <p className="text-gray-500 text-sm mt-1">kWh Generated Daily</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-navy-600">
-                    <AnimatedCounter to={5000} suffix="+" />
-                  </div>
-                  <p className="text-gray-500 text-sm mt-1">Homes & Businesses Powered</p>
-                </div>
+            <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+              <FadeUp>
+                <span className="inline-block text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4">
+                  Our Services
+                </span>
               </FadeUp>
+              <FadeUp delay={0.1}>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-navy-600 leading-tight mb-6">
+                  Complete Solar Solutions for{' '}
+                  <span className="text-gradient-gold">Every Need</span>
+                </h2>
+              </FadeUp>
+              <FadeUpSmall delay={0.2}>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  From residential rooftops to industrial power plants, we deliver end-to-end solar solutions.
+                </p>
+              </FadeUpSmall>
             </div>
 
-            {/* Services Grid */}
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+            {/* Services Grid - Solis Power Card Style */}
+            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" staggerDelay={0.1}>
               {services.map((service, index) => (
                 <StaggerItem key={service.title}>
-                  <Link href={`/services/${service.slug}`}>
-                    <AnimatedCard
-                      index={index}
-                      className="group bg-gray-50 rounded-2xl p-8 hover:bg-navy-600 transition-all duration-500 cursor-pointer h-full"
-                    >
-                      <div className="w-16 h-16 bg-gradient-solar rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-orange">
-                        <service.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="font-bold text-xl text-navy-600 mb-3 group-hover:text-white transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600 group-hover:text-white/80 transition-colors leading-relaxed">
-                        {service.description}
-                      </p>
-                    </AnimatedCard>
-                  </Link>
+                  <AnimatedCard
+                    index={index}
+                    className="group bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 h-full border border-gray-100"
+                  >
+                    <div className="w-14 h-14 bg-gradient-gold rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-gold">
+                      <service.icon className="w-7 h-7 text-navy-600" />
+                    </div>
+                    <h3 className="font-serif font-bold text-lg text-navy-600 mb-2 group-hover:text-gold-500 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {service.description}
+                    </p>
+                  </AnimatedCard>
                 </StaggerItem>
               ))}
             </StaggerContainer>
-
-            {/* Awards Badge */}
-            <FadeUp delay={0.5} className="mt-12 flex justify-center">
-              <div className="inline-flex items-center gap-3 bg-suncity-green/10 rounded-full px-6 py-3">
-                <Award className="w-6 h-6 text-suncity-green" />
-                <span className="text-suncity-green font-semibold">Top Innovation Awards</span>
-                <span className="text-navy-600 font-bold">+</span>
-              </div>
-            </FadeUp>
           </div>
         </SectionReveal>
 
         {/* Why Choose Us Section */}
-        <SectionReveal className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <SectionReveal className="py-8 md:py-12 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
               {/* Content */}
               <div>
                 <FadeUp>
-                  <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4">
-                    <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
+                  <span className="inline-block text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4">
                     Why Choose Suncity Solar
-                  </div>
+                  </span>
                 </FadeUp>
                 <FadeUp delay={0.1}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-navy-600 mb-6 leading-tight">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy-600 mb-4 leading-tight">
                     Where Innovation{' '}
-                    <span className="text-gradient-solar">Meets Impact</span>
+                    <span className="text-gradient-gold">Meets Impact</span>
                   </h2>
                 </FadeUp>
                 <FadeUpSmall delay={0.2}>
-                  <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed">
                     <strong className="text-navy-600">Suncity Solar</strong> combines breakthrough solar technology with real-world sustainability—delivering clean energy solutions that drive progress, reduce emissions, and empower communities.
                   </p>
                 </FadeUpSmall>
 
                 {/* Features */}
-                <StaggerContainer className="space-y-8" staggerDelay={0.1} delayChildren={0.3}>
+                <StaggerContainer className="space-y-6" staggerDelay={0.1} delayChildren={0.3}>
                   {whyChooseUs.map((item) => (
                     <StaggerItem key={item.number}>
-                      <div className="flex gap-6 group">
+                      <div className="flex gap-4 group">
                         <motion.div
                           whileHover={{ scale: 1.05 }}
-                          className="flex-shrink-0 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center text-2xl font-bold text-solar-500 group-hover:bg-gradient-solar group-hover:text-white transition-all"
+                          className="flex-shrink-0 w-14 h-14 bg-white rounded-xl shadow-card flex items-center justify-center text-xl font-bold text-gold-500 group-hover:bg-gradient-gold group-hover:text-navy-600 transition-all"
                         >
                           {item.number}
                         </motion.div>
                         <div>
-                          <h3 className="font-bold text-xl text-navy-600 mb-2">{item.title}</h3>
-                          <p className="text-gray-600">{item.description}</p>
+                          <h3 className="font-serif font-bold text-lg text-navy-600 mb-1">{item.title}</h3>
+                          <p className="text-gray-600 text-sm">{item.description}</p>
                         </div>
                       </div>
                     </StaggerItem>
@@ -593,9 +519,9 @@ export default function Home() {
 
               {/* Image/Partners */}
               <SlideInRight>
-                <div className="bg-white rounded-3xl p-10 shadow-2xl">
-                  <h4 className="text-center text-gray-500 mb-8">We&apos;re Proud to Partner with The Best</h4>
-                  <StaggerContainer className="grid grid-cols-3 gap-8" staggerDelay={0.08}>
+                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-premium">
+                  <h4 className="text-center text-gray-500 mb-6 text-sm font-medium">We&apos;re Proud to Partner with The Best</h4>
+                  <StaggerContainer className="grid grid-cols-3 gap-4 md:gap-6" staggerDelay={0.08}>
                     {['ISO', 'BIS', 'CE', 'FICCI', 'ASSOCHAM', 'Make in India'].map((partner, index) => (
                       <StaggerItem key={partner}>
                         <motion.div
@@ -614,20 +540,19 @@ export default function Home() {
         </SectionReveal>
 
         {/* Projects Section */}
-        <SectionReveal className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+        <SectionReveal className="py-10 md:py-16 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-12">
               <div>
                 <FadeUp>
-                  <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4">
-                    <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
+                  <span className="inline-block text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4">
                     Our Projects
-                  </div>
+                  </span>
                 </FadeUp>
                 <FadeUp delay={0.1}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-navy-600 leading-tight">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy-600 leading-tight">
                     Energizing Communities{' '}
-                    <span className="text-gradient-solar">Through Innovation</span>
+                    <span className="text-gradient-gold">Through Innovation</span>
                   </h2>
                 </FadeUp>
               </div>
@@ -645,16 +570,16 @@ export default function Home() {
             </div>
 
             {/* Projects Grid */}
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" staggerDelay={0.1}>
               {projects.map((project, index) => (
                 <StaggerItem key={project.title}>
                   <AnimatedCard
                     index={index}
-                    className="group bg-gray-50 rounded-2xl overflow-hidden h-full"
+                    className="group bg-white rounded-xl overflow-hidden h-full shadow-card hover:shadow-card-hover border border-gray-100"
                   >
                     {/* Image */}
                     {project.image && (
-                      <div className="relative h-48 overflow-hidden">
+                      <div className="relative h-40 overflow-hidden">
                         <Image
                           src={project.image.imageUrl}
                           alt={project.title}
@@ -663,31 +588,31 @@ export default function Home() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-navy-600/80 to-transparent" />
                         {/* Tags */}
-                        <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                        <div className="absolute top-3 left-3 flex flex-wrap gap-2">
                           <span className="px-2 py-1 bg-white/90 text-navy-600 text-xs font-semibold rounded">
                             {project.capacity}
                           </span>
-                          <span className="px-2 py-1 bg-solar-500 text-white text-xs font-semibold rounded">
+                          <span className="px-2 py-1 bg-gold-500 text-navy-600 text-xs font-semibold rounded">
                             {project.category}
                           </span>
                         </div>
                       </div>
                     )}
                     {/* Content */}
-                    <div className="p-6">
-                      <span className="text-xs text-solar-500 font-semibold">{project.type}</span>
-                      <h3 className="font-bold text-lg text-navy-600 mt-1 mb-2">{project.title}</h3>
-                      <div className="flex items-center gap-1 text-gray-500 text-sm mb-3">
-                        <MapPin className="w-4 h-4" />
+                    <div className="p-5">
+                      <span className="text-xs text-gold-500 font-semibold">{project.type}</span>
+                      <h3 className="font-serif font-bold text-base text-navy-600 mt-1 mb-2">{project.title}</h3>
+                      <div className="flex items-center gap-1 text-gray-500 text-xs mb-2">
+                        <MapPin className="w-3 h-3" />
                         {project.location}
                       </div>
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">{project.description}</p>
+                      <p className="text-gray-600 text-xs mb-3 line-clamp-2 leading-relaxed">{project.description}</p>
                       <Link
-                        href={`/projects/${project.slug}`}
-                        className="inline-flex items-center gap-1 text-solar-500 font-semibold text-sm hover:gap-2 transition-all"
+                        href="/projects"
+                        className="inline-flex items-center gap-1 text-gold-500 font-semibold text-xs hover:gap-2 transition-all"
                       >
                         More Detail
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
                   </AnimatedCard>
@@ -698,35 +623,34 @@ export default function Home() {
         </SectionReveal>
 
         {/* Testimonials Section */}
-        <section className="py-24 bg-navy-600 relative overflow-hidden">
+        <section className="py-12 md:py-16 bg-navy-600 relative overflow-hidden">
           {/* Decorative */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="absolute top-0 right-0 w-96 h-96 bg-solar-500/10 rounded-full blur-3xl"
+            className="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"
           />
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="absolute bottom-0 left-0 w-80 h-80 bg-suncity-green/10 rounded-full blur-3xl"
+            className="absolute bottom-0 left-0 w-80 h-80 bg-teal-400/10 rounded-full blur-3xl"
           />
 
-          <div className="container mx-auto px-4 relative">
-            <div className="text-center mb-16">
+          <div className="container mx-auto px-4 md:px-6 relative">
+            <div className="text-center mb-8 md:mb-10">
               <FadeUp>
-                <div className="inline-flex items-center gap-2 text-solar-400 font-semibold text-sm uppercase tracking-wider mb-4">
-                  <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
+                <span className="inline-block text-gold-400 font-semibold text-sm uppercase tracking-wider mb-4">
                   Powered by Trust and Results
-                </div>
+                </span>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
                   What Our Clients Say{' '}
-                  <span className="text-gradient-solar">Matters</span>
+                  <span className="text-gradient-gold">Matters</span>
                 </h2>
               </FadeUp>
             </div>
@@ -740,10 +664,10 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 md:p-12 border border-white/10"
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/10"
                 >
-                  <Quote className="w-16 h-16 text-solar-400 mb-6" />
-                  <p className="text-xl md:text-2xl text-white leading-relaxed mb-8">
+                  <Quote className="w-12 h-12 text-gold-400 mb-4" />
+                  <p className="text-lg md:text-xl text-white leading-relaxed mb-6">
                     "{testimonials[currentTestimonial].text}"
                   </p>
                   <div className="flex items-center gap-4">
@@ -751,28 +675,28 @@ export default function Home() {
                       <Image
                         src={testimonials[currentTestimonial].image.imageUrl}
                         alt={testimonials[currentTestimonial].name}
-                        width={60}
-                        height={60}
-                        className="rounded-full border-2 border-solar-400"
+                        width={50}
+                        height={50}
+                        className="rounded-full border-2 border-gold-400"
                       />
                     )}
                     <div>
-                      <div className="font-bold text-white text-lg">{testimonials[currentTestimonial].name}</div>
-                      <div className="text-white/60">{testimonials[currentTestimonial].company}</div>
+                      <div className="font-bold text-white">{testimonials[currentTestimonial].name}</div>
+                      <div className="text-white/60 text-sm">{testimonials[currentTestimonial].company}</div>
                     </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
 
               {/* Dots */}
-              <div className="flex justify-center gap-2 mt-8">
+              <div className="flex justify-center gap-2 mt-6">
                 {testimonials.map((_, index) => (
                   <motion.button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     whileHover={{ scale: 1.2 }}
-                    className={`h-3 rounded-full transition-all ${
-                      index === currentTestimonial ? 'bg-solar-500 w-8' : 'bg-white/30 w-3'
+                    className={`h-2 rounded-full transition-all ${
+                      index === currentTestimonial ? 'bg-gold-500 w-8' : 'bg-white/30 w-2'
                     }`}
                   />
                 ))}
@@ -782,46 +706,45 @@ export default function Home() {
         </section>
 
         {/* Case Studies Section */}
-        <SectionReveal className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+        <SectionReveal className="py-8 md:py-12 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-10 md:mb-12">
               <FadeUp>
-                <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4 justify-center">
-                  <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
+                <span className="inline-block text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4">
                   Case Studies
-                </div>
+                </span>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <h2 className="text-4xl md:text-5xl font-bold text-navy-600 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy-600 leading-tight">
                   Powering Success Through{' '}
-                  <span className="text-gradient-solar">Renewable Projects</span>
+                  <span className="text-gradient-gold">Renewable Projects</span>
                 </h2>
               </FadeUp>
             </div>
 
             {/* Case Studies Grid */}
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" staggerDelay={0.1}>
               {caseStudies.map((study, index) => (
                 <StaggerItem key={study.title}>
                   <AnimatedCard
                     index={index}
-                    className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full"
+                    className="group bg-white rounded-xl p-5 shadow-card border border-gray-100 h-full hover:shadow-card-hover"
                   >
-                    <span className="text-xs text-solar-500 font-semibold">{study.capacity}</span>
-                    <h3 className="font-bold text-lg text-navy-600 mt-2 mb-3">{study.title}</h3>
-                    <p className="text-gray-600 text-sm mb-4">{study.description}</p>
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <span className="text-xs text-gold-500 font-semibold">{study.capacity}</span>
+                    <h3 className="font-serif font-bold text-base text-navy-600 mt-2 mb-2">{study.title}</h3>
+                    <p className="text-gray-600 text-xs mb-3 leading-relaxed">{study.description}</p>
+                    <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                       <div className="flex gap-2">
                         <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">{study.category}</span>
                         <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">{study.location}</span>
                       </div>
                     </div>
                     <Link
-                      href={`/projects/${study.slug}`}
-                      className="inline-flex items-center gap-1 text-solar-500 font-semibold text-sm mt-4 hover:gap-2 transition-all"
+                      href="/projects"
+                      className="inline-flex items-center gap-1 text-gold-500 font-semibold text-xs mt-3 hover:gap-2 transition-all"
                     >
                       Read Detail
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-3 h-3" />
                     </Link>
                   </AnimatedCard>
                 </StaggerItem>
@@ -831,28 +754,27 @@ export default function Home() {
         </SectionReveal>
 
         {/* CTA Section */}
-        <SectionReveal className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-br from-navy-600 to-navy-500 rounded-3xl p-10 md:p-16 relative overflow-hidden">
+        <SectionReveal className="py-10 md:py-16 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="bg-gradient-to-br from-navy-600 to-navy-500 rounded-2xl p-8 md:p-12 relative overflow-hidden">
               {/* Decorative */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-solar-500/20 rounded-full blur-3xl" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/20 rounded-full blur-3xl" />
 
-              <div className="relative grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
                   <FadeUp>
-                    <div className="inline-flex items-center gap-2 text-solar-400 font-semibold text-sm uppercase tracking-wider mb-4">
-                      <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
+                    <span className="inline-block text-gold-400 font-semibold text-sm uppercase tracking-wider mb-4">
                       Powered by Trust and Results
-                    </div>
+                    </span>
                   </FadeUp>
                   <FadeUp delay={0.1}>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4 leading-tight">
                       Ready to switch to solar?{' '}
-                      <span className="text-gradient-solar">Let&apos;s start the journey.</span>
+                      <span className="text-gradient-gold">Let&apos;s start the journey.</span>
                     </h2>
                   </FadeUp>
                   <FadeUpSmall delay={0.2}>
-                    <p className="text-lg text-white/80 mb-8">
+                    <p className="text-base md:text-lg text-white/80 mb-6">
                       With <strong className="text-white">Suncity Solar</strong>, solar isn&apos;t complicated. It&apos;s reliable, intelligent, and built to perform. Let&apos;s bring clean energy to life together.
                     </p>
                   </FadeUpSmall>
@@ -860,7 +782,7 @@ export default function Home() {
                     <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
                       <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 bg-gradient-solar text-white font-semibold px-8 py-4 rounded-full shadow-orange hover:shadow-orange-lg transition-all"
+                        className="inline-flex items-center gap-2 bg-gradient-gold text-navy-600 font-semibold px-6 py-3 rounded-lg shadow-gold hover:shadow-gold-lg transition-all"
                       >
                         Start The Journey
                         <ArrowRight className="w-5 h-5" />
@@ -870,22 +792,22 @@ export default function Home() {
                 </div>
 
                 {/* Form */}
-                <SlideInRight className="bg-white rounded-2xl p-8 shadow-xl">
+                <SlideInRight className="bg-white rounded-xl p-6 md:p-8 shadow-premium">
                   <FadeUp>
-                    <h3 className="text-2xl font-bold text-navy-600 mb-6">Get Your Free Consultation</h3>
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-navy-600 mb-5">Get Your Free Consultation</h3>
                   </FadeUp>
-                  <form className="space-y-4">
+                  <form className="space-y-3">
                     <FadeUpSmall delay={0.1}>
-                      <Input placeholder="Your Name" className="h-12 rounded-xl" />
+                      <Input placeholder="Your Name" className="h-11 rounded-lg" />
                     </FadeUpSmall>
                     <FadeUpSmall delay={0.15}>
-                      <Input type="email" placeholder="Your Email" className="h-12 rounded-xl" />
+                      <Input type="email" placeholder="Your Email" className="h-11 rounded-lg" />
                     </FadeUpSmall>
                     <FadeUpSmall delay={0.2}>
-                      <Input type="tel" placeholder="Phone Number" className="h-12 rounded-xl" />
+                      <Input type="tel" placeholder="Phone Number" className="h-11 rounded-lg" />
                     </FadeUpSmall>
                     <AnimatedButton delay={0.25}>
-                      <Button className="w-full h-12 bg-gradient-solar text-white font-semibold rounded-xl shadow-orange hover:shadow-orange-lg">
+                      <Button className="w-full h-11 bg-gradient-gold text-navy-600 font-semibold rounded-lg shadow-gold hover:shadow-gold-lg">
                         Get Free Quote
                         <Send className="w-4 h-4 ml-2" />
                       </Button>
@@ -898,20 +820,19 @@ export default function Home() {
         </SectionReveal>
 
         {/* Blog Section */}
-        <SectionReveal className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+        <SectionReveal className="py-8 md:py-12 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-6 mb-8 md:mb-10">
               <div>
                 <FadeUp>
-                  <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4">
-                    <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
+                  <span className="inline-block text-gold-500 font-semibold text-sm uppercase tracking-wider mb-3">
                     Suncity Solar Blog
-                  </div>
+                  </span>
                 </FadeUp>
                 <FadeUp delay={0.1}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-navy-600 leading-tight">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy-600 leading-tight">
                     Green Insights,{' '}
-                    <span className="text-gradient-solar">Real Impact</span>
+                    <span className="text-gradient-gold">Real Impact</span>
                   </h2>
                 </FadeUp>
               </div>
@@ -919,7 +840,7 @@ export default function Home() {
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="/blogs"
-                    className="inline-flex items-center gap-2 bg-navy-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-navy-500 transition-colors"
+                    className="inline-flex items-center gap-2 bg-navy-600 text-white font-semibold px-5 py-2.5 rounded-full hover:bg-navy-500 transition-colors text-sm"
                   >
                     Read More
                     <ArrowRight className="w-4 h-4" />
@@ -929,15 +850,15 @@ export default function Home() {
             </div>
 
             {/* Blog Grid */}
-            <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
+            <StaggerContainer className="grid md:grid-cols-3 gap-4 md:gap-6" staggerDelay={0.15}>
               {blogPosts.map((post, index) => (
                 <StaggerItem key={post.title}>
                   <AnimatedCard
                     index={index}
-                    className="group bg-white rounded-2xl overflow-hidden shadow-lg h-full"
+                    className="group bg-white rounded-xl overflow-hidden shadow-card h-full hover:shadow-card-hover border border-gray-100"
                   >
                     {post.image && (
-                      <div className="relative h-56 overflow-hidden">
+                      <div className="relative h-48 overflow-hidden">
                         <Image
                           src={post.image.imageUrl}
                           alt={post.title}
@@ -946,14 +867,14 @@ export default function Home() {
                         />
                       </div>
                     )}
-                    <div className="p-6">
-                      <span className="text-gray-500 text-sm">{post.date}</span>
-                      <h3 className="font-bold text-xl text-navy-600 mt-2 mb-4 group-hover:text-solar-500 transition-colors">
+                    <div className="p-5">
+                      <span className="text-gray-500 text-xs">{post.date}</span>
+                      <h3 className="font-serif font-bold text-lg text-navy-600 mt-2 mb-3 group-hover:text-gold-500 transition-colors line-clamp-2">
                         {post.title}
                       </h3>
                       <Link
-                        href={`/blogs/${post.slug}`}
-                        className="inline-flex items-center gap-1 text-solar-500 font-semibold text-sm hover:gap-2 transition-all"
+                        href="/blogs"
+                        className="inline-flex items-center gap-1 text-gold-500 font-semibold text-sm hover:gap-2 transition-all"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4" />

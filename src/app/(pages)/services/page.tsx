@@ -1,251 +1,204 @@
-'use client';
-
-import Image from 'next/image';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHeader from '@/components/shared/PageHeader';
-import { servicesData } from '@/lib/data/services';
-import { ArrowRight, CheckCircle, Sun, BatteryCharging, BarChart3, Settings, Wallet, FileCheck } from 'lucide-react';
 import {
-  FadeUp,
-  FadeUpSmall,
-  SlideInLeft,
-  SlideInRight,
-  StaggerContainer,
-  StaggerItem,
-  AnimatedCard,
-  SectionReveal,
-} from '@/components/animations';
+  HardHat,
+  Compass,
+  Wrench,
+  GraduationCap,
+  CheckCircle,
+  ArrowRight,
+  Droplets,
+  Flame,
+  Settings,
+  Phone,
+} from 'lucide-react';
 
-const serviceIcons: { [key: string]: any } = {
-  'solar-system-design-installation': Sun,
-  'smart-energy-storage-solutions': BatteryCharging,
-  'energy-efficiency-consulting': BarChart3,
-  'monitoring-maintenance-services': Settings,
-  'solar-financing-solutions': Wallet,
-  'government-subsidy-assistance': FileCheck,
+export const metadata: Metadata = {
+  title: 'Our Services',
+  description:
+    "Discover Suncity Solar's end-to-end services, from consultation and installation to maintenance and our pioneering DOS training program.",
 };
+
+const services = [
+  {
+    icon: HardHat,
+    title: 'Solar Rooftop Installation',
+    description:
+      'We provide turnkey rooftop installation services for on-grid, off-grid, and hybrid systems. Our expert team ensures a seamless and efficient installation process.',
+    points: ['Residential, Commercial, & Industrial', 'On-Grid, Off-Grid, & Hybrid', 'Net Metering Assistance', 'Highest Safety Standards'],
+    color: 'from-solar-400 to-solar-600',
+  },
+  {
+    icon: Droplets,
+    title: 'Solar Pump Installation',
+    description:
+      "Empowering India's agriculture with our specialized solar water pump installation services. We help farmers select the right pump and guide them through subsidy processes.",
+    points: ['For Agriculture & Drinking Water', 'AC/DC Pump Systems', 'Surface & Submersible Pumps', 'Govt. Subsidy Scheme Guidance'],
+    color: 'from-blue-400 to-blue-600',
+  },
+  {
+    icon: Flame,
+    title: 'Solar Water Heater Installation',
+    description:
+      'Enjoy hot water powered by the sun. Our team installs high-quality solar water heaters for homes, hotels, and hospitals with optimal placement.',
+    points: ['For Residential & Commercial Use', 'ETC & FPC Systems', 'Plumbing Integration', 'Fast & Clean Installation'],
+    color: 'from-red-400 to-red-600',
+  },
+  {
+    icon: Settings,
+    title: 'AMC & Maintenance',
+    description:
+      'Protect your solar investment with our Annual Maintenance Contracts (AMC). We offer proactive maintenance and prompt troubleshooting.',
+    points: ['Regular System Health Checks', 'Panel Cleaning Services', 'Inverter & Battery Servicing', '24/7 Support'],
+    color: 'from-green-400 to-green-600',
+  },
+  {
+    icon: Compass,
+    title: 'Consultation & Site Survey',
+    description:
+      'Every successful solar project begins with a plan. Our experts provide free consultations, conduct detailed site surveys, and design optimal solutions.',
+    points: ['Free Solar Consultation', 'Detailed Site Analysis', 'Energy Load Calculation', 'Customized System Design'],
+    color: 'from-purple-400 to-purple-600',
+  },
+  {
+    icon: GraduationCap,
+    title: 'DOS Training Program',
+    description:
+      'Our vision of "Employment for All" comes to life through the DOS—Discovery of Success GURUKUL. We train individuals to become certified solar entrepreneurs.',
+    points: ['Technical & Business Training', 'Hands-On Practical Sessions', 'Entrepreneurship Development', 'Certification & Post-Training Support'],
+    color: 'from-amber-400 to-amber-600',
+  },
+];
 
 export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        title="Our Services"
+        title="Our Solar Services"
         breadcrumb="Services"
-        description="End-to-end solar solutions from consultation to installation and beyond. Experience the Suncity Solar difference."
+        description="End-to-end solutions to power your journey towards energy independence."
       />
 
       {/* Services Grid */}
-      <SectionReveal className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <FadeUp>
-              <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4 justify-center">
-                <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
-                What We Offer
-              </div>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy-600 mb-4">
-                Comprehensive <span className="text-gradient-solar">Solar Services</span>
-              </h2>
-            </FadeUp>
-            <FadeUpSmall delay={0.2}>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                From initial consultation to ongoing maintenance, Suncity Solar provides complete solar solutions tailored to your needs.
-              </p>
-            </FadeUpSmall>
+      <section className="py-8 md:py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+            <div className="section-subtitle justify-center">What We Offer</div>
+            <h2 className="section-title">
+              Comprehensive <span className="text-gradient-solar">Solar Services</span>
+            </h2>
+            <p className="text-gray-600">
+              From initial consultation to long-term maintenance, we provide complete solar solutions tailored to your
+              needs.
+            </p>
           </div>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
-            {servicesData.map((service) => {
-              const IconComponent = serviceIcons[service.slug] || Sun;
-              return (
-                <StaggerItem key={service.slug}>
-                  <Link href={`/services/${service.slug}`}>
-                    <AnimatedCard className="group bg-gray-50 rounded-2xl overflow-hidden h-full cursor-pointer hover:shadow-xl transition-all duration-300">
-                      {service.image && (
-                        <div className="relative h-48 overflow-hidden">
-                          <Image
-                            src={service.image.imageUrl}
-                            alt={service.name}
-                            fill
-                            className="object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-navy-600/80 to-transparent" />
-                          <div className="absolute bottom-4 left-4">
-                            <div className="w-14 h-14 bg-gradient-solar rounded-xl flex items-center justify-center shadow-orange">
-                              <IconComponent className="w-7 h-7 text-white" />
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                      <div className="p-6">
-                        <h3 className="font-bold text-xl text-navy-600 mb-3 group-hover:text-solar-500 transition-colors">
-                          {service.name}
-                        </h3>
-                        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                          {service.shortDescription}
-                        </p>
-                        
-                        {/* Quick Features */}
-                        <div className="space-y-2 mb-4">
-                          {service.features.slice(0, 3).map((feature, i) => (
-                            <div key={i} className="flex items-start gap-2">
-                              <CheckCircle className="w-4 h-4 text-suncity-green flex-shrink-0 mt-0.5" />
-                              <span className="text-gray-600 text-xs">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div key={service.title} className="card-premium p-8 group">
+                {/* Icon */}
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}
+                >
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
 
-                        <span className="inline-flex items-center gap-1 text-solar-500 font-semibold text-sm group-hover:gap-2 transition-all">
-                          Learn More
-                          <ArrowRight className="w-4 h-4" />
-                        </span>
-                      </div>
-                    </AnimatedCard>
-                  </Link>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
-        </div>
-      </SectionReveal>
+                {/* Title */}
+                <h3 className="font-bold text-xl text-navy-600 mb-4">{service.title}</h3>
 
-      {/* Process Overview */}
-      <SectionReveal className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <FadeUp>
-              <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4 justify-center">
-                <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
-                Our Process
+                {/* Description */}
+                <p className="text-gray-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+
+                {/* Points */}
+                <ul className="space-y-3">
+                  {service.points.map((point) => (
+                    <li key={point} className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-suncity-green flex-shrink-0" />
+                      <span className="text-sm text-gray-700">{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy-600">
-                How We <span className="text-gradient-solar">Work</span>
-              </h2>
-            </FadeUp>
-          </div>
-
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.15}>
-            {[
-              { step: '01', title: 'Consultation', desc: 'Free site assessment and requirement analysis' },
-              { step: '02', title: 'Design', desc: 'Custom system design optimized for your needs' },
-              { step: '03', title: 'Installation', desc: 'Professional installation by certified teams' },
-              { step: '04', title: 'Support', desc: 'Ongoing monitoring and maintenance' },
-            ].map((item, index) => (
-              <StaggerItem key={index}>
-                <AnimatedCard className="text-center p-6 bg-white rounded-2xl shadow-lg h-full relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-solar opacity-10 rounded-bl-full" />
-                  <div className="relative">
-                    <div className="w-16 h-16 bg-gradient-solar rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-orange">
-                      <span className="text-2xl font-bold text-white">{item.step}</span>
-                    </div>
-                    <h3 className="font-bold text-xl text-navy-600 mb-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
-                  </div>
-                </AnimatedCard>
-              </StaggerItem>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
-      </SectionReveal>
+      </section>
 
-      {/* Why Choose Us */}
-      <SectionReveal className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <SlideInLeft>
-              <div>
-                <FadeUp>
-                  <div className="inline-flex items-center gap-2 text-solar-500 font-semibold text-sm uppercase tracking-wider mb-4">
-                    <span className="w-8 h-0.5 bg-solar-500 rounded-full" />
-                    Why Suncity Solar
+      {/* Process Section */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+            <div className="section-subtitle justify-center">Our Process</div>
+            <h2 className="section-title">
+              How We <span className="text-gradient-solar">Work</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: '01', title: 'Consultation', desc: 'Free consultation to understand your energy needs' },
+              { step: '02', title: 'Site Survey', desc: 'Detailed analysis of your property and requirements' },
+              { step: '03', title: 'Installation', desc: 'Professional installation by certified technicians' },
+              { step: '04', title: 'Support', desc: 'Ongoing maintenance and 24/7 customer support' },
+            ].map((item, i) => (
+              <div key={item.step} className="text-center relative">
+                {/* Connector Line */}
+                {i < 3 && (
+                  <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-solar" />
+                )}
+                {/* Step Circle */}
+                <div className="relative">
+                  <div className="w-20 h-20 rounded-full bg-gradient-solar flex items-center justify-center mx-auto mb-6 shadow-orange relative z-10">
+                    <span className="text-2xl font-bold text-white">{item.step}</span>
                   </div>
-                </FadeUp>
-                <FadeUp delay={0.1}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-navy-600 mb-6">
-                    Trusted by <span className="text-gradient-solar">Thousands</span>
-                  </h2>
-                </FadeUp>
-                <FadeUpSmall delay={0.2}>
-                  <p className="text-gray-600 mb-8">
-                    With over 5 years of experience and 500+ successful installations, Suncity Solar is the trusted name in solar solutions across Rajasthan and beyond.
-                  </p>
-                </FadeUpSmall>
-                <StaggerContainer className="space-y-4" staggerDelay={0.1}>
-                  {[
-                    'MNRE empaneled installer',
-                    '25-year performance guarantee',
-                    'Local presence for rapid support',
-                    'Comprehensive AMC packages',
-                    'Financing assistance available',
-                  ].map((item, i) => (
-                    <StaggerItem key={i}>
-                      <div className="flex items-center gap-3">
-                        <div className="w-6 h-6 bg-suncity-green/20 rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-4 h-4 text-suncity-green" />
-                        </div>
-                        <span className="text-gray-700 font-medium">{item}</span>
-                      </div>
-                    </StaggerItem>
-                  ))}
-                </StaggerContainer>
+                </div>
+                <h3 className="font-bold text-lg text-navy-600 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
-            </SlideInLeft>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <SlideInRight>
-              <div className="bg-navy-600 rounded-2xl p-8 text-center">
-                <h3 className="text-2xl font-bold text-white mb-8">Our Track Record</h3>
-                <div className="grid grid-cols-2 gap-8">
-                  {[
-                    { number: '500+', label: 'Installations' },
-                    { number: '15MW+', label: 'Capacity' },
-                    { number: '5000+', label: 'Happy Customers' },
-                    { number: '6+', label: 'Years Experience' },
-                  ].map((stat, i) => (
-                    <div key={i}>
-                      <div className="text-4xl font-bold text-gradient-solar mb-2">{stat.number}</div>
-                      <div className="text-white/80 text-sm">{stat.label}</div>
-                    </div>
-                  ))}
+      {/* CTA Section */}
+      <section className="py-8 md:py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="bg-gradient-to-br from-navy-600 to-navy-500 rounded-3xl p-12 md:p-16 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-solar-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-suncity-green/20 rounded-full blur-3xl" />
+
+            <div className="relative grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Go Solar?</h2>
+                <p className="text-gray-300 mb-8 text-lg">
+                  Let our experts guide you. Get a free, no-obligation consultation and a customized quote for your
+                  home or business.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/contact" className="btn-solar">
+                    Request a Free Consultation
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                  <a
+                    href="tel:+919587211700"
+                    className="btn-outline-white flex items-center gap-2"
+                  >
+                    <Phone className="w-5 h-5" />
+                    Call Us Now
+                  </a>
                 </div>
               </div>
-            </SlideInRight>
-          </div>
-        </div>
-      </SectionReveal>
-
-      {/* CTA */}
-      <SectionReveal className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-br from-navy-600 to-navy-500 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-solar-500/20 rounded-full blur-3xl" />
-            <div className="relative">
-              <FadeUp>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Ready to Go <span className="text-gradient-solar">Solar?</span>
-                </h2>
-              </FadeUp>
-              <FadeUpSmall delay={0.1}>
-                <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-                  Get a free consultation and customized proposal from our solar experts. Take the first step toward energy independence today.
-                </p>
-              </FadeUpSmall>
-              <FadeUp delay={0.2}>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-solar text-white font-semibold px-8 py-4 rounded-full shadow-orange hover:shadow-orange-lg hover:scale-105 transition-all"
-                >
-                  Get Free Consultation
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </FadeUp>
+              <div className="hidden lg:flex justify-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+                  <div className="text-5xl font-bold text-white mb-2">10,000+</div>
+                  <div className="text-gray-400">Successful Installations</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </SectionReveal>
+      </section>
     </>
   );
 }

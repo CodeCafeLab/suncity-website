@@ -136,10 +136,10 @@ export default function AboutPage() {
       />
 
       {/* ===== WHO WE ARE SECTION ===== */}
-      <SectionReveal className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <SectionReveal className="py-10 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
           {/* Section Header */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10 md:mb-12">
             <FadeUp>
               <div className="inline-flex items-center gap-3 bg-gray-100 rounded-full px-5 py-2.5">
                 <span className="w-2 h-2 bg-solar-500 rounded-full" />
@@ -246,9 +246,9 @@ export default function AboutPage() {
 
       {/* ===== OUR VALUES SECTION ===== */}
       <SectionReveal className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-6">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-12">
             <FadeUp>
               <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 shadow-sm mb-6">
                 <span className="w-2 h-2 bg-solar-500 rounded-full" />
@@ -324,8 +324,8 @@ export default function AboutPage() {
       </SectionReveal>
 
       {/* ===== CTA SECTION - Ready to Switch ===== */}
-      <SectionReveal className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <SectionReveal className="py-10 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-0 overflow-hidden rounded-[2rem] shadow-2xl">
             {/* Left - Dark CTA */}
             <div className="bg-navy-600 p-10 md:p-14 relative overflow-hidden">
@@ -406,9 +406,9 @@ export default function AboutPage() {
 
       {/* ===== SERVICES SECTION ===== */}
       <SectionReveal className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-6">
           {/* Header with Stats */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 md:mb-12">
             <div className="max-w-2xl">
               <FadeUp>
                 <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 shadow-sm mb-6">
@@ -490,8 +490,8 @@ export default function AboutPage() {
       </SectionReveal>
 
       {/* ===== WHY CHOOSE US SECTION ===== */}
-      <SectionReveal className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <SectionReveal className="py-10 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <SlideInLeft className="relative order-2 lg:order-1">
@@ -558,8 +558,8 @@ export default function AboutPage() {
 
       {/* ===== TEAM SECTION ===== */}
       <SectionReveal className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-10 md:mb-12">
             <FadeUp>
               <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 shadow-sm mb-6">
                 <span className="w-2 h-2 bg-solar-500 rounded-full" />

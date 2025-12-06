@@ -31,9 +31,9 @@ const Logo = ({
   };
 
   const taglineColors = {
-    default: 'text-suncity-green',
-    light: 'text-solar-400',
-    dark: 'text-suncity-green',
+    default: 'text-teal-400',
+    light: 'text-gold-400',
+    dark: 'text-teal-400',
   };
 
   return (
